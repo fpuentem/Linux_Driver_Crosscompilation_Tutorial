@@ -2,6 +2,6 @@ PWD := $(shell pwd)
 obj-m += mymodule.o
 
 all:
-	make ARCH=arm CROSS_COMPILE=$(CROSS) -C $(KERNEL) M=$(PWD) modules
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 clean:
-	make ARCH=arm -C $(KERNEL) M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/build  M=$(PWD) clean
