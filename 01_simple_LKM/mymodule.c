@@ -3,7 +3,7 @@
 
 /* Meta Information */
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Fab Puente Mansilla");
+MODULE_AUTHOR("Fab");
 MODULE_DESCRIPTION("A hello world LKM");
 
 /**
