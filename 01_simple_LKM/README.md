@@ -30,6 +30,6 @@ And you should get a **"Hello, Kernel!"** message in the terminal.
 ## Step 4: Remove the module
 
 ```bash
- sudo insmod mymodule
+ sudo rmmod mymodule
 ```
 
