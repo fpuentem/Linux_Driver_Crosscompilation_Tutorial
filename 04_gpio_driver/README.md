@@ -27,7 +27,7 @@ sudo insmod gpio_driver.ko
 Check out that the installation of the kernel module is okay.
 
 ```console
-foo@bar:~$ sudo dmesg | tail -n 4
+orangepi@orangepipc:~/.../04_gpio_driver$ sudo dmesg | tail -n 4
 [   71.762637] systemd[1368]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
 [10616.632285] read_write: loading out-of-tree module taints kernel.
 [10616.632848] Hello, Kernel!
@@ -51,12 +51,12 @@ crw-rw-rw- 1 root root 240, 0 Jan  3 19:02 /dev/my_gpio_driver
 
 Turn on/turn off the LED.  The LED is hooked up in pin 7 of CON3.
 
-```bash
+```console
 orangepi@orangepipc:~/.../04_gpio_driver$ echo 1 > /dev/my_gpio_driver
 ```
 Read the button status. The button is hooked up in pin 11 of CON3.
 
-```bash
+```console
 orangepi@orangepipc:~/.../04_gpio_driver$ head -1 /dev/my_gpio_driver 
 ```
 ## Step 5: Remove the module
